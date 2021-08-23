@@ -27,7 +27,6 @@ const updateProductCountById = async (req, res) => {
     const id = req.body.id
     const newCount = req.body.countInStock
 
-    console.log(id, newCount);
 
     try {
         await Product.findById(id, (error, countToUpdate) => {
