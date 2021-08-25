@@ -17,7 +17,7 @@ const HomeScreen = () => {
     useEffect(() => {
         dispatch(listProducts())
         console.log(products)
-    }, [dispatch, products])
+    }, [dispatch])
 
     return (
         <div className="homescreen">
