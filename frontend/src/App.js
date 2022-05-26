@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
+import CheckoutScreen from './screens/CheckoutScreen';
 
 //components
 import Navbar from './components/Navbar'
@@ -27,12 +28,12 @@ function App() {
             <Route exact path="/" component={HomeScreen} />
             <Route exact path="/product/:id" component={ProductScreen} />
             <Route exact path="/cart" component={CartScreen} />
+
+            <Route exact path="/checkout" component={CheckoutScreen} />
+
           </Switch>
         </main>
 
-        {/* home screen */}
-        {/*  product screen */}
-        {/* cart screen */}
     </Router>
   );
 }

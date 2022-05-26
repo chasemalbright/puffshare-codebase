@@ -60,7 +60,13 @@ const ProductScreen = ({match, history}) => {
                                 </select>
                             </p>
                             <p>
-                                <button type="button" onClick={addToCartHandler}>Add To Cart</button>
+                                {product.countInStock === 0 ? (
+                                    <button type="button" >Unavailable</button>
+                                ): (
+                                    <button type="button" onClick={addToCartHandler}>Add To Cart</button>
+                                )}
+
+                                
                             </p>
                         </div>
                     </div>

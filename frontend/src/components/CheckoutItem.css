@@ -1,6 +1,6 @@
 .cartitem {
     width: 100%;
-    padding: 1rem;
+    padding: .5rem;
     margin-bottom: 8px;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
@@ -8,6 +8,7 @@
     background: #fff;
     border-radius: 2px;
     place-items: center;
+    white-space: nowrap;
 }
 
 .cartitem__name {
@@ -24,19 +25,10 @@
 .cartitem__select {
     padding: 10px 17px;
 }
-
-.cartitem__delete {
-    padding: 10px 17px;
-    color: red;
-    background: #f4f4f4;
-    border: 1px solid #171717;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-.priceCart {
+.price {
     padding-top: 14px;
 }
+
 
 .cartitem__delete:hover,
 .cartitem__delete:active,
@@ -55,7 +47,11 @@
     .cartitem__price {
         font-size: .8rem;
     }
+    .price {
+        padding-top: 9px;
+    }
 }
+
 
 @media (max-width: 700px) {
     .cartitem__name {
@@ -67,5 +63,6 @@
     }
     .cartitem__price {
         font-size: .6rem;
+        
     }
 }

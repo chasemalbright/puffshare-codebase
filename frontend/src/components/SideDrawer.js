@@ -3,7 +3,9 @@ import './SideDrawer.css'
 import { Link } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
-const SideDrawer = ({ show }) => {
+
+// passing click prop enables close backdrop menu on click of button
+const SideDrawer = ({ show, click }) => {
     const sideDrawerClass = ["sidedrawer"]
 
     if(show) {
@@ -19,7 +21,7 @@ const SideDrawer = ({ show }) => {
 
     return <div className={sideDrawerClass.join(" ")}>
         <ul className="sidedrawer__links">
-            <li>
+            <li onClick={click}> {/*onClick toggles the mobile menu */} 
                 <Link to="/cart">
                     <i className="fas fa-shopping-cart"></i>
                 <span>
@@ -27,7 +29,7 @@ const SideDrawer = ({ show }) => {
                 </span>
                 </Link>
             </li>
-            <li>
+            <li onClick={click}> {/*onClick toggles the mobile menu */}
                 <Link to="/">
                     Shop
                 </Link>
